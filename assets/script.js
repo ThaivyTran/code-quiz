@@ -189,3 +189,54 @@ function getLeaderboard() {
   }
   return leaderboardArray;
 }
+
+// shows leaderboard on leaderboard card
+function renderLeaderboard() {
+    let sortedLeaderboardArray = sortLeaderboard();
+    const highscoreList = document.querySelector("#highscore-list");
+    highscoreList.innerHTML = "";
+    for (let i = 0; i < sortedLeaderboardArray.length; i++) {
+      let leaderboardEntry = sortedLeaderboardArray[i];
+      let newListItem = document.createElement("li");
+      newListItem.textContent =
+        leaderboardEntry.initials + " - " + leaderboardEntry.score;
+      highscoreList.append(newListItem);
+    }
+  }
+  
+  // sort score from highest to lowest
+  function sortLeaderboard() {
+    let leaderboardArray = getLeaderboard();
+    if (!leaderboardArray) {
+      return;
+    }
+  
+    leaderboardArray.sort(function (a, b) {
+      return b.score - a.score;
+    });
+    return leaderboardArray;
+  }
+  
+  clearButton.addEventListener("click", clearHighscores);
+  
+  // clear local storage highscores
+  function clearHighscores() {
+    localStorage.clear();
+    renderLeaderboard();
+  }
+  // for back button on highscores card
+  backButton.addEventListener("click", returnToStart);
+  
+  // for highscore button
+  highscoreList.addEventListener("click", showLeaderboard);
+  
+  function showLeaderboard() {
+    hideCards();
+    leaderboardCard.removeAttribute("hidden");
+    clearInterval(intervalID);  // stop countdown
+    //assign undefined to time and display that, so that time does not appear on page
+    time = undefined;
+    displayTime();
+    // display highscores on leaderboard card
+    renderLeaderboard();
+  }
