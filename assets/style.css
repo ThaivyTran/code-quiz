@@ -5,6 +5,7 @@ body {
     text-align: center;
 }
 
+/* style for header */
 header {
     display: flex;
     justify-content: space-between;
@@ -13,12 +14,14 @@ header {
     padding: 3vh;
 }
 
+/* style for main */
 main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* highscore board styles */
 .highscore-class {
     display: block;
     color: skyblue;
@@ -35,11 +38,13 @@ main {
     padding-inline-start: 20px;
 }
 
+/* timer  */
 time {
     font-size: 20px;
     float: right;
 }
 
+/* style for all buttons on page */
 .button {
     display: block;
     margin: 0 auto;
@@ -55,6 +60,7 @@ time {
     background-color: skyblue;
 }
 
+/* h1 and p tags styles */
 h1 {
     font-size: 30px;
 }
@@ -67,6 +73,7 @@ p {
     display: inline-flex;
 }
 
+/* for the prompt of questions */
 .card {
     max-width: 75%;
     margin-top: 15vh;
@@ -77,21 +84,25 @@ p {
     border-color: blue;
 }
 
+/* for 1st screen */
 #start-screen {
     display: inline;
     text-align: center;
 }
 
+/* for options on the buttons */
 .option-button {
     width: 100%;
     text-align: left;
     margin: 5px;
 }
 
+/* so results div dont appear on screen */
 #result-div {
     display: none;
 }
   
+/* user input field style  */
 .inline-form {
     display: flex;
     flex-wrap: wrap;
@@ -104,6 +115,7 @@ p {
     padding: 1vh;
 }
 
+/* for the back button  */
 #back-button {
     margin-right: 10px;
 }

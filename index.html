@@ -7,13 +7,13 @@
 </head>
 
 <body>
-
+  <!-- highscore and timer are on the top of the page -->
   <header>
     <button class=highscore-class id=highscore-link>View Highscores</button>
     <br><br>
       <time>Time: <span id="time"></span></time>
   </header>
-
+    <!-- inside the start container -->
     <main>
       <section id=start-card class="card">
         <h1>Coding Quiz Challenge</h1>
@@ -21,7 +21,7 @@
             Keep in mind that <strong style=color:red;>incorrect</strong>  answers will penalize your score/time by <strong style=color:red;>10</strong> seconds!</p>
             <button id=start-button class="button" >Start Quiz</button>
       </section>
-
+  <!-- questions linked to js so the arrrays appear on webpage for user -->
       <section hidden id=question-card class="card">
         <h1 id=question-text></h1>
           <section id=quiz-options>
@@ -31,7 +31,7 @@
             <button id=option3 class="button option-button"></button>
           </section>
         </section>
-
+ <!-- show final score on to container -->
           <div id=result-div>
             <hr>
             <p id=result-text></p>
@@ -46,7 +46,7 @@
                 <button id="submit-button" class="button">Submit</button>
               </form>
           </section>
- 
+   <!-- for highscore page -->
           <section hidden id=highscore-card class="card">
               <h1>Highscores</h1>
               <ol id="highscore-list"></ol>
