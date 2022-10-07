@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Code-quiz</title>
+</head>
+
+<body>
+
+  <header>
+    <button class=highscore-class id=highscore-link>View Highscores</button>
+    <br><br>
+      <time>Time: <span id="time"></span></time>
+  </header>
+
+    <main>
+      <section id=start-card class="card">
+        <h1>Coding Quiz Challenge</h1>
+          <p>Try to answer the following code-related questions within the <em>50 seconds</em> time limit.
+            Keep in mind that <strong style=color:red;>incorrect</strong>  answers will penalize your score/time by <strong style=color:red;>10</strong> seconds!</p>
+            <button id=start-button class="button" >Start Quiz</button>
+      </section>
+
+      <section hidden id=question-card class="card">
+        <h1 id=question-text></h1>
+          <section id=quiz-options>
+            <button id=option0 class="button option-button"></button>
+            <button id=option1 class="button option-button"></button>
+            <button id=option2 class="button option-button"></button>
+            <button id=option3 class="button option-button"></button>
+          </section>
+        </section>
+
+          <div id=result-div>
+            <hr>
+            <p id=result-text></p>
+          </div>
+
+          <section hidden id=score-card class="card">
+              <h1>All done!</h1>
+              <p>Your final score is <span id=score></span>.</p>
+              <form class="inline-form" id="submission-form">
+                <label for="initials">Enter initials: </label>
+                <input type="text" id="initials">
+                <button id="submit-button" class="button">Submit</button>
+              </form>
+          </section>
+ 
+          <section hidden id=highscore-card class="card">
+              <h1>Highscores</h1>
+              <ol id="highscore-list"></ol>
+              <section class="inline-buttons">
+                <button id="back-button" class="button">Go Back</button>
+                <button id="clear-button" class="button">Clear Highscores</button>
+              </section>
+          </section>
+      </main>
+      <script src="assets/script.js"></script>
+</body>
+</html>
